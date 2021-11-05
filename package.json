@@ -1,0 +1,13 @@
+{
+  "name": "expert-vote-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "kuthon",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "fs": "^0.0.1-security",
+    "got": "^11.8.2"
+  }
+}
