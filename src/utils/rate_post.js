@@ -1,10 +1,11 @@
 import { Post } from "../models/post.js";
 import fs from "fs"
+import path from "path";
 
-const rawBanWords = fs.readFileSync('E:/node_js/projects/expert-vote-bot/ban_words.json');
+const rawBanWords = fs.readFileSync(path.resolve("././ban_words.json"));
 const banWords = JSON.parse(rawBanWords).data;
 
-const rawBanSources = fs.readFileSync('E:/node_js/projects/expert-vote-bot/ban_sources.json');
+const rawBanSources = fs.readFileSync(path.resolve("././ban_sources.json"));
 const banSources = JSON.parse(rawBanSources).data;
 
 // Эта функция оценивает пост и возвращает три значения: -1 - даунвоут, 0 - игнор, 1 - апвоут
