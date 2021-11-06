@@ -16,7 +16,7 @@ const main = async () => {
     // Получение тематики пользователя
     let topicId = await getTopicId(user.id);
     // Получение ленты
-    let posts = await getNewsfeed(topicId, 100)
+    let posts = await getNewsfeed(topicId, 50)
     // Первая запись в ленте - карточка эксперта
     if ((posts[0] instanceof ExpertCard) == false) {
         return console.log(`Здравствуйте, ${user.first_name}!\nК сожалению вы не эксперт, либо же произошла непредвиденная ошибка`)
@@ -39,7 +39,7 @@ const main = async () => {
                 await sleep(process.env.SLEEP_TIME)
             }
         }
-        posts = await getNewsfeed(topicId, 100)
+        posts = await getNewsfeed(topicId, 50)
     }
 }
 
