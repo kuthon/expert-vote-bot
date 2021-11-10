@@ -10,8 +10,9 @@ export class Post {
             data.reposts.count,
             data.views.count,
             data.attachments.length,
-            data.rating.can_change,
-            data.rating.rated
+            data.rating != null ? data.rating.can_change : false,
+            data.rating != null ? data.rating.rated : false
+
         )
     }
 
